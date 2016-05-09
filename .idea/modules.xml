@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/golive_api.iml" filepath="$PROJECT_DIR$/golive_api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/golive_base/golive_base.iml" filepath="$PROJECT_DIR$/golive_base/golive_base.iml" />
+      <module fileurl="file://$PROJECT_DIR$/golive_behavior/golive_behavior.iml" filepath="$PROJECT_DIR$/golive_behavior/golive_behavior.iml" />
+      <module fileurl="file://$PROJECT_DIR$/golive_config/golive_config.iml" filepath="$PROJECT_DIR$/golive_config/golive_config.iml" />
+      <module fileurl="file://$PROJECT_DIR$/golive_member/golive_member.iml" filepath="$PROJECT_DIR$/golive_member/golive_member.iml" />
+      <module fileurl="file://$PROJECT_DIR$/golive_user/golive_user.iml" filepath="$PROJECT_DIR$/golive_user/golive_user.iml" />
+    </modules>
+  </component>
+</project>

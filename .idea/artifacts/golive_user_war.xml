@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="golive_user:war">
+    <output-path>$PROJECT_DIR$/golive_user/target</output-path>
+    <root id="archive" name="golive_user.war">
+      <element id="artifact" artifact-name="golive_user:war exploded" />
+    </root>
+  </artifact>
+</component>

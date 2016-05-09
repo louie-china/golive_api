@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.golive.user.api.mapper.BaseDataMapper">
+    <resultMap id="ClientTypeMap" type="com.golive.base.api.model.ClientType">
+        <id column="ID" property="id" jdbcType="INTEGER"/>
+        <result column="InstalmentCode" property="instalmentCode" jdbcType="VARCHAR"/>
+        <result column="InstalmentName" property="instalmentName" jdbcType="VARCHAR"/>
+        <result column="ManufacturerCode" property="manufacturerCode" jdbcType="VARCHAR"/>
+        <result column="PresentVersion" property="presentVersion" jdbcType="VARCHAR"/>
+        <result column="LauncherSwitch" property="launcherSwitch" jdbcType="VARCHAR"/>
+        <result column="Play" property="play" jdbcType="SMALLINT"/>
+        <result column="SpeedLimit" property="speedLimit" jdbcType="SMALLINT"/>
+        <result column="HardwarePlatformCode" property="hardwarePlatformCode" jdbcType="VARCHAR"/>
+        <result column="LockSwitch" property="lockSwitch" jdbcType="SMALLINT"/>
+        <result column="AdSwitch" property="adSwitch" jdbcType="SMALLINT"/>
+        <result column="SignCoin" property="signCoin" jdbcType="SMALLINT"/>
+        <result column="KdmServerAddressID" property="kdmServerAddressID" jdbcType="VARCHAR"/>
+        <result column="PartnerID" property="partnerID" jdbcType="INTEGER"/>
+        <result column="Currency" property="currency" jdbcType="VARCHAR"/>
+        <result column="PayType" property="payType" jdbcType="SMALLINT"/>
+        <result column="KdmSwitch" property="kdmSwitch" jdbcType="SMALLINT"/>
+        <result column="LicenseProviderCode" property="licenseProviderCode" jdbcType="VARCHAR"/>
+        <result column="UseSdcard" property="useSdcard" jdbcType="SMALLINT"/>
+    </resultMap>
+
+    <select id="findClientTypeList" resultMap="ClientTypeMap">
+        SELECT
+        d.ID,
+        d.InstalmentCode,
+        d.InstalmentName,
+        d.ManufacturerCode,
+        d.PresentVersion,
+        d.LauncherSwitch,
+        d.Play,
+        d.SpeedLimit,
+        d.HardwarePlatformCode,
+        d.LockSwitch,
+        d.AdSwitch,
+        d.SignCoin,
+        d.KdmServerAddressID,
+        d.PartnerID,
+        d.Currency,
+        d.PayType,
+        d.KdmSwitch,
+        d.LicenseProviderCode,
+        d.UseSdcard
+        FROM
+        t_deviceinstalment d
+        WHERE
+        1 = 1
+        ORDER BY
+        d.ID DESC
+    </select>
+
+    <select id="findClientTypeByCode" parameterType="java.lang.String" resultMap="ClientTypeMap">
+        SELECT
+        d.ID,
+        d.InstalmentCode,
+        d.InstalmentName,
+        d.ManufacturerCode,
+        d.PresentVersion,
+        d.LauncherSwitch,
+        d.Play,
+        d.SpeedLimit,
+        d.HardwarePlatformCode,
+        d.LockSwitch,
+        d.AdSwitch,
+        d.SignCoin,
+        d.KdmServerAddressID,
+        d.PartnerID,
+        d.Currency,
+        d.PayType,
+        d.KdmSwitch,
+        d.LicenseProviderCode,
+        d.UseSdcard
+        FROM
+        t_deviceinstalment d
+        WHERE
+        1 = 1
+        AND d.InstalmentCode = #{code}
+        ORDER BY
+        d.ID DESC
+    </select>
+
+</mapper>
